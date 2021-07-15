@@ -2,7 +2,7 @@ import vlc
 from time import sleep
 
 class InternetRadio(object):
-    def __init__(self, volume=30):
+    def __init__(self, volume=40):
         self.volume = int(volume)
         self.stations = dict([
             ("test", "1.mp3"),
@@ -12,6 +12,7 @@ class InternetRadio(object):
 
     def play(self, station):
         p = vlc.MediaPlayer(self.stations[station])
+        p.audio_set_volume(self.volume)
         p.play()
         sleep(5)  # Or however long you expect it to take to open vlc
         while p.is_playing():
