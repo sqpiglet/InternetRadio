@@ -9,13 +9,15 @@ class InternetRadio(object):
             ("Monte Carlo", "http://icecast.unitedradio.it/RMC.mp3"),
             ("Jazz", "http://nashe1.hostingradio.ru:80/jazz-256"),
             ("Книга", "http://bookradio.hostingradio.ru:8069/fm")])
+        self.player = vlc.MediaPlayer()
+
 
     def play(self, station):
-        player = vlc.MediaPlayer(self.stations[station])
-        player.audio_set_volume(self.volume)
-        player.play()
+        self.player.set_mrl(self.stations[station])
+        self.player.audio_set_volume(self.volume)
+        self.player.play()
         sleep(5)  # Or however long you expect it to take to open vlc
-        while player.is_playing():
+        while self.player.is_playing():
             sleep(1)
 
     def set_volume(self, volume):
