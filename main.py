@@ -29,8 +29,8 @@ class InternetRadio(object):
         self.set_volume(0)
 
 
-p = InteMonte CarlornetRadio()
-p.play("")
+p = InternetRadio()
+p.play("Monte Carlo")
 
 
 # Adjust volume
