@@ -24,14 +24,20 @@ class InternetRadio(object):
             return True
         else:
             return False
+    def set_station(self, stationNumber):
+        if isinstance(stationNumber, int) and 1 <= stationNumber <= len(self.stations):
+            stations = list(self.stations)
+            self.play(stations[stationNumber-1])
+            return True
+        else:
+            return False
 
     def stop(self):
         self.set_volume(0)
 
 
 p = InternetRadio()
-p.play("Monte Carlo")
-
+#p.play("test")
 
 # Adjust volume
 #while True:
@@ -40,5 +46,5 @@ p.play("Monte Carlo")
 
 # Change station
 while True:
-    newStation = str(input())
-    p.play(newStation)
+    newStation = int(input())
+    p.set_station(newStation)
