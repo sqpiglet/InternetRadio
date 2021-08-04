@@ -1,0 +1,8 @@
+# Update packages
+sudo apt-get update
+
+# Install VLC
+sudo apt-get install vlc
+
+# Run Internet radio
+sudo python InternetRadio.py
