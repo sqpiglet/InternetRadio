@@ -6,7 +6,7 @@ class InternetRadio(object):
     def __init__(self, valume=60):
         self.volume = int(valume)
         self.stations = dict([
-            ("test", "1.mp3"),
+            ("test", "test.mp3"),
             ("Monte Carlo", "http://icecast.unitedradio.it/RMC.mp3"),
             ("Jazz", "http://nashe1.hostingradio.ru:80/jazz-256"),
             ("Книга", "http://bookradio.hostingradio.ru:8069/fm")])
