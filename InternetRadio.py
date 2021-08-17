@@ -9,7 +9,7 @@ class InternetRadio(object):
             ("test", "test.mp3"),
             ("Monte Carlo", "http://icecast.unitedradio.it/RMC.mp3"),
             ("Jazz", "http://nashe1.hostingradio.ru:80/jazz-256"),
-            ("Книга", "http://bookradio.hostingradio.ru:8069/fm")])
+            ("Radio book", "http://bookradio.hostingradio.ru:8069/fm")])
         self.player = vlc.MediaPlayer()
         self.set_volume(self.volume)
 
