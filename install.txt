@@ -5,4 +5,4 @@ sudo apt-get update
 sudo apt-get install vlc
 
 # Run Internet radio
-InternetRadio.py
+python3 InternetRadio.py
